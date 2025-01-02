@@ -28,7 +28,7 @@ links_images_data['Song'] = links_images_data['Song'].str.strip().str.lower()
 # Placeholder image for missing images
 MISSING_IMAGE_URL = "path_to_your_missing_image.jpg"
 
-# Add custom CSS for styling
+# Add custom CSS for styling and footer
 st.markdown(
     """
     <style>
@@ -78,6 +78,21 @@ st.markdown(
         color: white;
         text-decoration: none;
     }
+    footer {
+        visibility: hidden;
+    }
+    div[class="css-1glnbuh e1fqkh3o3"] {
+        visibility: visible;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #f5f5f5;
+        padding: 10px;
+        text-align: center;
+        font-size: 12px;
+        color: #555555;
+    }
     :root {
         --background-color: #fafafa; /* Lightened background */
         --text-color: #555; /* Lighter text color */
@@ -87,19 +102,8 @@ st.markdown(
         --button-text: white;
         --button-hover-background: #2980b9; /* Slightly darker blue for hover */
     }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --background-color: #2c3e50; /* Darker background for dark mode */
-            --text-color: #ecf0f1; /* Lighter text for dark mode */
-            --title-color: #ecf0f1;
-            --description-color: #bdc3c7;
-            --button-background: #3498db; /* Light blue button background */
-            --button-text: white;
-            --button-hover-background: #2980b9;
-        }
-    }
     </style>
+    <div class="css-1glnbuh e1fqkh3o3">Made with ❤️ by <strong>Tejas Kamle</strong></div>
     """,
     unsafe_allow_html=True
 )
